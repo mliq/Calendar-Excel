@@ -1,0 +1,16 @@
+Calendar
+
+one month
+6 lines
+
+Start November 2014-2015
+
+Print just one month or more.
+--
+
+OK so MakeCalendar runs
+DrawCalendar2 to draw
+then 
+AddEvents.
+
+So first I need to redraw the calendar.
