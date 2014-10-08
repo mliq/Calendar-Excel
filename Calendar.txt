@@ -14,3 +14,7 @@ then
 AddEvents.
 
 So first I need to redraw the calendar.
+--
+Fit on landscape:
+Row Height:11
+Column Width (A:I with A and I blank): 12
