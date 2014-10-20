@@ -35,7 +35,6 @@ End Sub
 Private Static Sub AddEvents()
 '
 ' Copy Name from Name column Events Into Calendar
-
 Dim col1
 Sheets("Events").Select
 'This loop runs until there is nothing in the Previous column
@@ -79,10 +78,13 @@ Range("A5").Select
     Sheets("Calendar").Select
     Application.Goto Range("$A$1")
 End Sub
+
 Private Static Sub ConvertDate(Date1)
 ' Convert Dates to row/column in Calendar
 Dim FindString As String
 FindString = Day(Date1)
+Dim Errs As Number
+Errs = 0
 'November 2014
 If Month(Date1) = 11 And Year(Date1) = 2014 Then
     If Trim(FindString) <> "" Then
@@ -337,9 +339,10 @@ ElseIf Month(Date1) = 12 And Year(Date1) = 2015 Then
         End If
 
 Else
-    MsgBox ("Error: " & Date1 & " is not yet in calendar sheet.")
-    Application.Goto Range("$B$660")
-    ActiveCell.FormulaR1C1 = "Errors:"
+
+    ' MsgBox ("Error: " & Date1 & " is not yet in calendar sheet.")
+    ' Application.Goto Range("$B$660")
+    ' ActiveCell.FormulaR1C1 = "Errors:"
 End If
 End Sub
 
